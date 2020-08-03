@@ -130,17 +130,17 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     public void showTipsDialog() {
         new AlertDialog.Builder(this)
-                .setTitle("提示信息")
+                .setTitle("Informações Rápidas") //提示信息
                 .setCancelable(false)
-                .setMessage("当前应用缺少必要权限，该功能暂时无法使用。如若需要，请单击【确定】按钮前往设置中心进行权限授权。")
-                .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                .setMessage("O aplicativo atual não possui as permissões necessárias e esta função está temporariamente indisponível. Se necessário, clique no botão [OK] para ir ao centro de configuração para obter autorização de permissão.")
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() { //取消
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         finish();
                     }
                 })
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {  //确定
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();

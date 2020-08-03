@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
 
         home: Scaffold(
           appBar: AppBar(
-            title: const Text('多图选择'),
+            title: const Text('Selecione Imagens'), //多图选择
           ),
           body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
@@ -120,7 +120,7 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () {
                     selectImages();
                   },
-                  child: Text("选择图片"),
+                  child: Text("Selecione uma Imagem"), //选择图片
                 ),
                 RaisedButton(
                   onPressed: () {
@@ -133,7 +133,7 @@ class _MyAppState extends State<MyApp> {
                       });
                     });
                   },
-                  child: Text("拍照"),
+                  child: Text("Tirar fotos"), //拍照
                 ),
                 RaisedButton(
                   onPressed: () {
@@ -145,7 +145,7 @@ class _MyAppState extends State<MyApp> {
                       });
                     });
                   },
-                  child: Text("拍视频"),
+                  child: Text("Faça um Vídeo"), //拍视频
                 ),
                 GridView.builder(
                     physics: NeverScrollableScrollPhysics(),
@@ -173,7 +173,7 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () {
                     selectVideos();
                   },
-                  child: Text("选择视频"),
+                  child: Text("Selecionar Vídeo"), //选择视频
                 ),
 
                 InkWell(
@@ -185,10 +185,10 @@ class _MyAppState extends State<MyApp> {
                   onPressed: () {
                     Future<String> future = ImagePickers.saveImageToGallery("http://i1.sinaimg.cn/ent/d/2008-06-04/U105P28T3D2048907F326DT20080604225106.jpg");
                     future.then((path){
-                      print("保存图片路径："+ path);
+                      print("Path："+ path); //保存图片路径
                     });
                   },
-                  child: Text("保存网络图片"),
+                  child: Text("Salvar Fotos"), //
                 ),
                 dataImagePath == "" ? Container():GestureDetector(onTap: (){
                   ImagePickers.previewImage(dataImagePath);
@@ -208,17 +208,17 @@ class _MyAppState extends State<MyApp> {
 
                     });
                   },
-                  child: Text("保存截屏图片"),
+                  child: Text("Salvar captura de tela"), //保存截屏图片
                 ),
 
                 RaisedButton(
                   onPressed: () {
                       Future<String> future = ImagePickers.saveVideoToGallery("http://vd4.bdstatic.com/mda-jbmn50510sid5yx5/sc/mda-jbmn50510sid5yx5.mp4");
                       future.then((path){
-                        print("视频保存成功");
+                        print("Vídeo salvo com sucesso"); //视频保存成功
                       });
                   },
-                  child: Text("保存视频"),
+                  child: Text("Salvar Vídeo"), //保存视频
                 ),
               ],
             ),
