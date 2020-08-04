@@ -48,4 +48,5 @@ dependencies {
     implementation ('com.github.chrisbanes.photoview:library:1.2.4'){
         exclude group: 'com.android.support'
     }
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }

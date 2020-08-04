@@ -109,7 +109,9 @@ public class PictureStyleUtil {
             parameterStyle.picturePreviewTextColor = R.color.bar_grey;
             // 相册列表已完成色值(已完成 可点击色值)
             parameterStyle.pictureCompleteTextColor = R.color.bar_grey;
+
         }else{
+
             // 相册列表标题栏右侧上拉箭头
             parameterStyle.pictureTitleUpResId = R.drawable.picture_icon_arrow_up;
             // 相册列表标题栏右侧下拉箭头
@@ -125,7 +127,9 @@ public class PictureStyleUtil {
             parameterStyle.picturePreviewTextColor = argb;
             // 相册列表已完成色值(已完成 可点击色值)
             parameterStyle.pictureCompleteTextColor = argb;
+
         }
+        
         return parameterStyle;
     }
 

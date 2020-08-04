@@ -79,7 +79,7 @@ class _MyAppState extends State<MyApp> {
 
         home: Scaffold(
           appBar: AppBar(
-            title: const Text('Selecione Imagens'), //多图选择
+            title: const Text('Exemplo do Image Pickers'), //多图选择
           ),
           body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),

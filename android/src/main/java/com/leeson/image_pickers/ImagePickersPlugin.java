@@ -133,6 +133,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
 
     this.result = result;
     if ("getPickerPaths".equals(methodCall.method)) {
+
       String galleryMode = methodCall.argument("galleryMode");
       Map<String,Number> uiColor = methodCall.argument("uiColor");
       Number selectCount = methodCall.argument("selectCount");
@@ -152,6 +153,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
       intent.putExtra(SelectPicsActivity.WIDTH,width);
       intent.putExtra(SelectPicsActivity.HEIGHT,height);
       intent.putExtra(SelectPicsActivity.COMPRESS_SIZE,compressSize);
+
       //直接调用拍照或拍视频时有效
       intent.putExtra(SelectPicsActivity.CAMERA_MIME_TYPE,cameraMimeType);
       (registrar.activity()).startActivityForResult(intent, SELECT);
