@@ -216,7 +216,7 @@ public class SelectPicsActivity extends BaseActivity {
                             .hideBottomControls(true)
                             .freeStyleCropEnabled(false)
 
-                            .setLanguage(1)
+                            .setLanguage(2)
 
                             .compress(false)// 是否压缩 true or false
                             .minimumCompressSize(Integer.MAX_VALUE)
