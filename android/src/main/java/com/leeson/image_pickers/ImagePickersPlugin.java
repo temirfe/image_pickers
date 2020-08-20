@@ -44,7 +44,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
       @Override
       public boolean onActivityResult(int requestCode, int resultCode, Intent intent) {
         if (requestCode == SELECT ) {
-          if (resultCode == Activity.RESULT_OK){
+          if (resultCode == Activity.RESULT_OK && result != null){
             List<Map<String,String>> paths = (List<Map<String,String>>) intent.getSerializableExtra(SelectPicsActivity.COMPRESS_PATHS);
             if (result != null){
               result.success(paths);
@@ -138,6 +138,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
       Map<String,Number> uiColor = methodCall.argument("uiColor");
       Number selectCount = methodCall.argument("selectCount");
       Boolean showCamera = methodCall.argument("showCamera");
+      Boolean showPreview = methodCall.argument("showPreview");
       Boolean enableCrop = methodCall.argument("enableCrop");
       Number width = methodCall.argument("width");
       Number height = methodCall.argument("height");
@@ -149,6 +150,7 @@ public class ImagePickersPlugin implements MethodChannel.MethodCallHandler {
       intent.putExtra(SelectPicsActivity.UI_COLOR, (Serializable) uiColor);
       intent.putExtra(SelectPicsActivity.SELECT_COUNT,selectCount);
       intent.putExtra(SelectPicsActivity.SHOW_CAMERA,showCamera);
+      intent.putExtra(SelectPicsActivity.SHOW_PREVIEW,showPreview);
       intent.putExtra(SelectPicsActivity.ENABLE_CROP,enableCrop);
       intent.putExtra(SelectPicsActivity.WIDTH,width);
       intent.putExtra(SelectPicsActivity.HEIGHT,height);
